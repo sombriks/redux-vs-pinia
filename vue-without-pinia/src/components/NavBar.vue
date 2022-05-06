@@ -1,10 +1,16 @@
 <template>
   <div>
-    <input/> <button>Login</button>
+    <input v-model="val" @keyup="(e) => $emit('onQuery', val)" />
+    <button @click="(e) => $emit('onLogin', !props.logged)">
+      {{ props.logged ? "Logout" : "Login" }}
+    </button>
   </div>
 </template>
 
 <script setup>
+import { defineProps, ref } from "vue";
+const props = defineProps(["query", "logged"]);
+const val = ref(props.query);
 </script>
 
 <style></style>

@@ -1,7 +1,10 @@
 <template>
-  <div>item</div>
+  <div>{{ props.product.name }}</div>
 </template>
 
-<script setup></script>
+<script setup>
+import { defineProps } from "vue";
+const props = defineProps(["product"]);
+</script>
 
 <style></style>

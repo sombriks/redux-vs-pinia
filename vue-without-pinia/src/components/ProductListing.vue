@@ -1,9 +1,17 @@
 <template>
-  <ProductItem v-for="i in [1,2,3,4,5]" :key="i"/>
+  <ProductItem
+    v-for="product in props.products"
+    :key="product.id"
+    :product="product"
+  />
 </template>
 
 <script setup>
-import ProductItem from "./ProductItem.vue"
+import { defineProps } from "vue";
+
+import ProductItem from "./ProductItem.vue";
+
+const props = defineProps(["products"]);
 </script>
 
 <style></style>
