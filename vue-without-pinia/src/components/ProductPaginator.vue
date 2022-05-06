@@ -1,6 +1,7 @@
 <template>
   <div>
-    <input/> <button>Login</button>
+    <button>prev</button>
+    <button>next</button>
   </div>
 </template>
 
