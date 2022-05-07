@@ -1,10 +1,12 @@
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import ProductItem from './ProductItem'
 
 export default function ProductListing(props) {
 
+  const products = useSelector(state => state.productsReducer)
+
   return <div>
-    {([1, 2, 3, 4, 5]).map(i => <ProductItem key={i} item={'item ' + i} />)}
+    {products.list.map(product => <ProductItem key={product.id} item={product} />)}
   </div>
 }
