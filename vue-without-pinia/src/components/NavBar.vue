@@ -1,8 +1,8 @@
 <template>
   <div>
     <input v-model="val" @keyup="(e) => $emit('onQuery', val)" />
-    <button @click="(e) => $emit('onLogin', !props.logged)">
-      {{ props.logged ? "Logout" : "Login" }}
+    <button @click="(e) => $emit('onLogin', !logged)">
+      {{ logged ? "Logout" : "Login" }}
     </button>
   </div>
 </template>

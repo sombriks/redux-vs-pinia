@@ -1,10 +1,10 @@
 <template>
-  <div>{{ props.product.name }}</div>
+  <div>{{ product.name }}</div>
 </template>
 
 <script setup>
 import { defineProps } from "vue";
-const props = defineProps(["product"]);
+defineProps(["product"]);
 </script>
 
 <style></style>

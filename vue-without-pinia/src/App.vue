@@ -43,7 +43,6 @@ const logged = ref(false);
 const products = ref(getProducts(""));
 
 function getProducts(query, page) {
-  console.log(query);
   let products = _products;
   if (query != "") products = products.filter((p) => p.name.includes(query));
   if (!page || page <= 0) page = 1;

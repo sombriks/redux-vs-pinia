@@ -1,7 +1,10 @@
 <template>
-  <div>item</div>
+  <div>{{product.name}}</div>
 </template>
 
-<script setup></script>
+<script setup>
+import { defineProps } from "vue";
+defineProps(["product"]);
+</script>
 
 <style></style>
