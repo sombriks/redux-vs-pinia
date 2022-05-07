@@ -15,4 +15,13 @@ I want a certain set of behaviors here:
 
 ## Observed results
 
+I've added a store-less vue version to use as benchmark. The extra complexity
+and tight coupling are alarming.
+
+React in 2022 isn't the same as 2018. This is why I've added a second react
+example using redux toolkit instead just plain old redux
+
+Pinia is dead simple to configure and components relying on it are much simper
+to maintain.
+
 WIP
